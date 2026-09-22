@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dasbor Biodata Diri</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .dashboard-container {
+            width: 100%;
+            max-width: 900px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+        }
+
+        /* Sidebar / Profil Kiri */
+        .profile-card {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 4px solid #ffffff;
+            object-fit: cover;
+            margin-bottom: 20px;
+            background-color: #ddd;
+        }
+
+        .profile-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .profile-role {
+            font-size: 0.95rem;
+            color: #d1d8e0;
+            margin-bottom: 25px;
+        }
+
+        .status-badge {
+            background-color: #20bf6b;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Konten Utama / Biodata Kanan */
+        .details-card {
+            padding: 40px;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            color: #1e3c72;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 8px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .info-item {
+            background-color: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #2a5298;
+        }
+
+        .info-label {
+            font-size: 0.8rem;
+            color: #64748b;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .info-value {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        /* Responsive Layout */
+        @media (max-width: 768px) {
+            .dashboard-container {
+                grid-template-columns: 1fr;
+            }
+
+            .details-card {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!-- SISIK KIRI: Foto & Identitas Utama -->
+        <div class="profile-card">
+            <!-- Ganti src dengan link foto Anda atau nama file gambar di folder yang sama -->
+            <img src="https://via.placeholder.com/150" alt="Foto Profil" class="profile-img">
+            
+            <!-- GANTI NAMA & PROFESI DI SINI -->
+            <div class="profile-name">Nihayah putri</div>
+            <div class="profile-role">Mahasiswi</div>
+            
+            <span class="status-badge">Aktif</span>
+        </div>
+
+        <!-- SISI KANAN: Detail Biodata -->
+        <div class="details-card">
+            <h2 class="section-title">Biodata Lengkap</h2>
+            
+            <div class="info-grid">
+                <!-- GANTI ISI DETAIL DI SINI -->
+                <div class="info-item">
+                    <div class="info-label">Nama Lengkap</div>
+                    <div class="info-value">Nihayah putri</div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-label">Tempat, Tanggal Lahir</div>
+                    <div class="info-value">Gisting, 26 April 2007</div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-label">Jenis Kelamin</div>
+                    <div class="info-value">Perempuan</div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-label">Email</div>
+                    <div class="info-value">nihayahputri@gmail.com</div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-label">No. Telepon</div>
+                    <div class="info-value">+62 85356573433</div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-label">Alamat</div>
+                    <div class="info-value">Jl. padat karya Gg.Perkutut No.blok 1,Labuhan Dalam,Kec.Tj.Senang,Kota Bandar Lampung</div>
+                </div>
+            </div>
+
+            <h2 class="section-title">Informasi Tambahan</h2>
+            
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-label">Pendidikan / Jurusan</div>
+                    <div class="info-value">Sistem Informasi</div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-label">Keahlian</div>
+                    <div class="info-value">HTML, CSS, JavaScript</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
